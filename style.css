@@ -63,8 +63,8 @@ body {
 .container {
     display: grid;
     width: 100vw;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 60px 85px 2fr 1fr;
+    grid-template-columns: 250px 3fr 1fr;
+    grid-template-rows: 60px 120px 2fr 1fr;
 }
 
 .header,
@@ -96,6 +96,7 @@ body {
     border-radius: 10px;
     width: clamp(150px, 30vw, 350px);
     height: 1.2rem;
+    padding: 7px;
 }
 
 .header-menu .name {
@@ -118,9 +119,9 @@ body {
     display: flex;
     align-items: center;
 
-    box-shadow: 10px 5px 3px rgb(228, 228, 228);
+    box-shadow: 0px 5px 3px rgb(228, 228, 228);
 
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .navbar .buttons {
@@ -168,6 +169,36 @@ body {
     color: white;
     background-color: var(--main-bg-color);
     height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    padding: 15px 40px;
+    line-height: 2;
+}
+
+.sidebar .main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.sidebar .list-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.list-row img {
+    height: 20px;
+}
+
+h2 {
+    font-weight: bold;
 }
 
 .projects {
