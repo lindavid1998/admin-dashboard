@@ -171,7 +171,9 @@ body {
 
     color: white;
     background-color: var(--main-bg-color);
-    height: 100vh;
+    /* height: 100%; */
+    /* height: min(100%, 100vh); */
+    height: max(100%, 100vh);
 
     display: flex;
     flex-direction: column;
@@ -310,4 +312,43 @@ h2 {
 .trending {
     grid-row: 4;
     grid-column: 3;
+}
+
+.trending .card {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background-color: white;
+    border-radius: var(--rounded-corners);
+    box-shadow: 5px 5px 8px var(--shadow-color);
+    padding: 15px 20px;
+}
+
+.trending img {
+    vertical-align: middle;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    object-position: 50% 0%;
+}
+
+.trending .handle {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.trending .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+}
+
+.trending .name {
+    color: var(--subtext-color);
+    font-size: 0.7rem;
 }
