@@ -51,7 +51,8 @@ table {
 /* styling */
 
 :root {
-    --main-bg-color: #1982FC;
+    /* --main-bg-color: #1982FC; */
+    --main-bg-color: #1d4ed8;
     --main-side-padding: 40px;
     --subtext-color: rgb(90, 90, 90);
     --rounded-corners: 10px;
@@ -60,7 +61,6 @@ table {
 
 body {
     font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
-
 }
 
 .container {
@@ -97,14 +97,23 @@ body {
     border: none;
     background-color: rgb(229, 229, 229);
     border-radius: 10px;
-    width: clamp(150px, 30vw, 350px);
+    width: clamp(150px, 40vw, 400px);
     height: 1.2rem;
     padding: 7px;
+    margin-right: 10px;
 }
 
 .header-menu .name {
     font-weight: bold;
     white-space: nowrap;
+}
+
+.notif-icon svg {
+    height: 30px;
+}
+
+.header-menu .name:hover {
+    color: rgb(97, 97, 97);
 }
 
 .profile-icon img {
@@ -150,6 +159,7 @@ body {
 
 .navbar .welcome {
     margin-left: 15px;
+    margin-right: 5px;
 }
 
 .navbar button {
@@ -171,9 +181,7 @@ body {
 
     color: white;
     background-color: var(--main-bg-color);
-    /* height: 100%; */
-    /* height: min(100%, 100vh); */
-    height: max(100%, 100vh);
+    /* height: max(100%, 100vh); */
 
     display: flex;
     flex-direction: column;
@@ -202,6 +210,10 @@ body {
     height: 20px;
 }
 
+.row-label:hover {
+    color: #799be7;
+}
+
 h2 {
     font-weight: bold;
     font-size: 1.1rem;
@@ -212,6 +224,10 @@ h2 {
     padding-top: 15px;
 }
 
+.projects, .trending {
+    padding-bottom: 30px;
+}
+
 .projects {
     grid-row: 3 / -1;
     grid-column: 2;
@@ -220,7 +236,7 @@ h2 {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(3, 200px);
+    grid-template-rows: repeat(3, 180px);
     justify-items: start;
     gap: 15px;
     margin-top: 10px;
@@ -232,7 +248,7 @@ h2 {
     display: flex;
     flex-direction: column;
 
-    background: linear-gradient(90deg, #ffba3a 2%, white 2%);
+    background: linear-gradient(90deg, var(--main-bg-color) 2%, white 2%);
     border-radius: var(--rounded-corners);
     box-shadow: 5px 5px 8px var(--shadow-color);
 
@@ -240,7 +256,7 @@ h2 {
 }
 
 .project-card:hover {
-    background: linear-gradient(90deg, var(--main-bg-color) 2%, white 2%);
+    background: linear-gradient(90deg, #ffba3a 2%, white 2%);
 }
 
 .project-card .title {
@@ -263,8 +279,13 @@ h2 {
     margin-bottom: 3px;
 }
 
-.project-card .icons img {
-    height: 20px;
+.icons svg {
+    width: 25px;
+    height: 25px;
+}
+
+svg:hover {
+    fill: rgb(152, 152, 152);
 }
 
 .announcements, .trending {
